@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "36b3c641-9a77-4028-8837-c9cde5b651f7",
+		"name": "VortexBack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30893398"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/categories",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": \"1\",\r\n   \"name\": \"Alimentos\"\r\n\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5005/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n         \"name\": \"Jugo\",\r\n        \"description\":\"Manzana\",\r\n        \"price\":15,\r\n        \"stock\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/orders/654817b1367314a1a514dbc0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"654817b1367314a1a514dbc0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders/654827f953300881d000d655",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/orders/654827f953300881d000d655",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"654827f953300881d000d655"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{  \"name\": \"Pastas\",\r\n    \"description\": \"Fideos\",\r\n    \"price\": 20,\r\n    \"categoryId\": \"6541188fc2b5d928d71ee1d8\",\r\n    \"stock\":3 \r\n  },{  \"name\": \"Frutas\",\r\n    \"description\": \"manzana\",\r\n    \"price\": 15,\r\n    \"categoryId\": \"6541188fc2b5d928d71ee1d8\",\r\n    \"stock\":3 \r\n  },{  \"name\": \"Verduras\",\r\n    \"description\": \"Papas\",\r\n    \"price\": 15,\r\n    \"categoryId\": \"6541188fc2b5d928d71ee1d8\",\r\n    \"stock\":3 \r\n  }]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders/654827f953300881d000d655/delete-product/6548276653300881d000d64f",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/orders/654827f953300881d000d655/delete-product/6548276653300881d000d64f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"654827f953300881d000d655",
+						"delete-product",
+						"6548276653300881d000d64f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders/654827f953300881d000d655/update-product/6548274553300881d000d64d",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \"quantity\": 4\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/orders/654827f953300881d000d655/update-product/6548274553300881d000d64d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"654827f953300881d000d655",
+						"update-product",
+						"6548274553300881d000d64d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/products/65411937c2b5d928d71ee1db",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/products/65411937c2b5d928d71ee1db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"65411937c2b5d928d71ee1db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders/createOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/orders/createOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"createOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders/654827f953300881d000d655",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"products\": [\r\n\r\n    {\r\n        \"productId\": \"6548274553300881d000d64d\"\r\n    },\r\n    {\r\n        \"productId\": \"6548276653300881d000d64f\"\r\n    },\r\n    {\r\n        \"productId\": \"654827c753300881d000d653\"\r\n    }]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/orders/654827f953300881d000d655",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"654827f953300881d000d655"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{  \"name\": \"Pastas\",\r\n    \"description\": \"Fideos\",\r\n    \"price\": 20,\r\n    \"categoryId\": \"6541188fc2b5d928d71ee1d8\",\r\n    \"stock\":3 \r\n  },{  \"name\": \"Frutas\",\r\n    \"description\": \"manzana\",\r\n    \"price\": 15,\r\n    \"categoryId\": \"6541188fc2b5d928d71ee1d8\",\r\n    \"stock\":3 \r\n  },{  \"name\": \"Verduras\",\r\n    \"description\": \"Papas\",\r\n    \"price\": 15,\r\n    \"categoryId\": \"6541188fc2b5d928d71ee1d8\",\r\n    \"stock\":3 \r\n  }]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders/654827f953300881d000d655/delete-product/6548276653300881d000d64f",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/orders/654827f953300881d000d655/delete-product/6548276653300881d000d64f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"654827f953300881d000d655",
+						"delete-product",
+						"6548276653300881d000d64f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
